@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import './listViewScreen.dart';
+import './urlScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,10 +32,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
     RandomWords(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    UrlScreen(),
     Text(
       'Index 2: School',
       style: optionStyle,
@@ -55,15 +54,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: FaIcon(FontAwesomeIcons.bookOpen),
             title: Text('List View'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: FaIcon(FontAwesomeIcons.solidImages),
             title: Text('Image Picker'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: FaIcon(FontAwesomeIcons.google),
             title: Text('Google Map'),
           ),
         ],
