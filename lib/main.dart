@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mobile_project/bateryScreen.dart';
 
 import './listViewScreen.dart';
 import './urlScreen.dart';
@@ -28,15 +29,11 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  
   List<Widget> _widgetOptions = <Widget>[
     RandomWords(),
     UrlScreen(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    BatteryScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -59,11 +56,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.solidImages),
-            title: Text('Image Picker'),
+            title: Text('Abrir url'),
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.google),
-            title: Text('Google Map'),
+            icon: FaIcon(FontAwesomeIcons.batteryFull),
+            title: Text('Info de Batería'),
           ),
         ],
         currentIndex: _selectedIndex,
