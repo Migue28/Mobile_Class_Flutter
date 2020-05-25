@@ -7,6 +7,10 @@ class UrlScreen extends StatefulWidget {
   _UrlScreenState createState() => _UrlScreenState();
 }
 
+/*
+ * Se crean los botones con íconos
+ * Se inserta el url estático para ir
+ */
 class _UrlScreenState extends State<UrlScreen> {
   @override
   Widget build(BuildContext context) {
@@ -36,6 +40,11 @@ class _UrlScreenState extends State<UrlScreen> {
     );
   }
 
+  /* Como parámetro se pide el url
+   *el https es necesario para ala función launch
+   *que es en sí la que abré el navegador
+   *Primero verificamos si el url es válido
+   */
   _launchURL(String userUrl) async {
     final url = "https://" + userUrl;
     if (await canLaunch(url)) {
