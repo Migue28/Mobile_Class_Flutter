@@ -9,12 +9,14 @@ Correr el comando
 flutter pub get*
 ```
 Luego 
-```flutter run```
+```
+flutter run
+```
 
-##Desarrollado por 
-*Eddy Cedeño
-*Daniel Justavino
-*Edwin Mitchell
-*Amilkar Pérez
-*Alek Rutherford
-*Juan Vázquez
+## Desarrollado por 
+* Eddy Cedeño
+* Daniel Justavino
+* Edwin Mitchell
+* Amilkar Pérez
+* Alek Rutherford
+* Juan Vázquez
